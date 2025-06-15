@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gmail Gerado com Sucesso</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #e0e0e0;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        h1, h2 {
+            color: #00ff88;
+            margin: 20px 0 10px;
+        }
+
+        p {
+            background-color: #1e1e1e;
+            padding: 12px 20px;
+            border-radius: 10px;
+            font-size: 1.1rem;
+            color: #ffffff;
+            width: 100%;
+            max-width: 500px;
+            margin: 10px 0 30px;
+            word-break: break-all;
+        }
+
+        a {
+            color: #00ccff;
+            text-decoration: none;
+            font-weight: bold;
+            border: 2px solid #00ccff;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: 0.3s;
+        }
+
+        a:hover {
+            background-color: #00ccff;
+            color: #121212;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Aqui, meu amigo 👇</h1>
+    <p>{{email}}</p>
+
+    <h2>Sua senha aqui 🔐</h2>
+    <p>{{senha}}</p>
+
+    <h1>Caso não dê, use este código (se pedir, é claro):</h1>
+    <p>{{code}}</p>
+
+    <a href="/">🔄 Voltar e criar outra conta</a>
+
+</body>
+</html>
