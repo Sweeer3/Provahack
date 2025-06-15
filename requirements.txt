@@ -1,3 +1,4 @@
 flask
 playwright
 faker
+-g ngrok 
