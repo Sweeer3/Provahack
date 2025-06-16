@@ -46,7 +46,9 @@ def automatizar():
            page_app.goto('https://www.meuguru.com/guru-ia')
            page_app.locator('body > div.flex.flex-1.flex-col.overflow-clip > header > div > div > div > button.flex.items-center.justify-center.whitespace-nowrap.disabled\:bg-gray-100.disabled\:text-gray-300.disabled\:border-none.disabled\:cursor-not-allowed.disabled\:hover\:opacity-100.text-base.h-10.rounded-full.bg-primary-700.text-white.hover\:opacity-100.hover\:bg-primary-900.gap-2.px-6.font-semibold').wait_for(state='visible')
            page_app.locator('body > div.flex.flex-1.flex-col.overflow-clip > header > div > div > div > button.flex.items-center.justify-center.whitespace-nowrap.disabled\:bg-gray-100.disabled\:text-gray-300.disabled\:border-none.disabled\:cursor-not-allowed.disabled\:hover\:opacity-100.text-base.h-10.rounded-full.bg-primary-700.text-white.hover\:opacity-100.hover\:bg-primary-900.gap-2.px-6.font-semibold').click()
-           page_app.get_by_role('button', name='Crie sua conta com e-mail').click()
+           botao = page.get_by_role("button", name="Crie sua conta com e-mail")
+           botao.wait_for(state='visible', timeout=15000)
+           botao.click()
             #parte do login
            nome, telefone = gerar_nome_telefone_unicos()
            page_app.get_by_role('textbox', name='Nome').fill(nome)
