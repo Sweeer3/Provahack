@@ -1,0 +1,9 @@
+services:
+  -type: web
+   name: playwright-flask
+   runtime: python
+   buildCommand: pip install -r requirements.txt && playwright install
+   startCommand: python Hack.py
+   envVars:
+     - key: PYTHON_VERSION
+       value: 3.13.2
