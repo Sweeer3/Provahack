@@ -26,7 +26,7 @@ def home():
 @app.route(r"/automatizar",methods=["POST"])
 def automatizar():
         with sync_playwright() as p:
-           browser = p.chromium.launch(headless=True)
+           browser = p.chromium.launch(headless=False)
             #abrir navegador
            page = browser.new_page()
            page_app = browser.new_page()
